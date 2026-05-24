@@ -1,0 +1,22 @@
+services:
+  erp-cars-backend:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: erp-cars/php-8.3
+    container_name: erp-cars-app
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8080:80"
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+    networks:
+      - erp-cars-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+networks:
+  erp-cars-network:
+    driver: bridge

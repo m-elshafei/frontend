@@ -1,0 +1,16 @@
+# v0 & Next.js ignores
+.vercel/
+.next/
+node_modules/
+
+# Laravel ignores (المهم عشان الصورة اللي بعتها)
+/vendor/
+.env
+.env.backup
+/storage/framework/views/*
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/bootstrap/cache/*
+
+# Common ignores
+.DS_Store
